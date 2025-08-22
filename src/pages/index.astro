@@ -1,16 +1,36 @@
 ---
-
+import certificates from "../data/certificates.json";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+  <h1 class="text-3xl font-bold mb-6">My Certificates</h1>
+  <div class="grid gap-6 sm:grid-cols-1 md:grid-cols-2">
+    {
+      certificates.map((cert) => (
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 border border-gray-200 dark:border-gray-700">
+          <h2 class="text-lg font-semibold mb-2">{cert.title}</h2>
+          {cert.type === "pdf" ? (
+            <iframe
+              src={cert.file}
+              class="w-full h-130 rounded border border-gray-300 dark:border-gray-600"
+            />
+          ) : (
+            <img
+              src={cert.file}
+              alt={cert.title}
+              class="w-full h-auto rounded border border-gray-300 dark:border-gray-600"
+            />
+          )}
+          <a
+            href={cert.file}
+            target="_blank"
+            class="block mt-2 text-blue-600 dark:text-blue-400 underline"
+          >
+            View Full
+          </a>
+        </div>
+      ))
+    }
+  </div>
+</Layout>

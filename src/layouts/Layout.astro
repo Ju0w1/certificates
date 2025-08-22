@@ -1,0 +1,29 @@
+---
+const { lang } = Astro.props;
+import "../styles/global.css";
+---
+
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{lang === "es" ? "Certificados" : "Certificates"}</title>
+  </head>
+  <body
+    class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans transition-colors duration-300"
+  >
+    <!-- Header sticky -->
+    <header class="sticky top-0 z-50 py-6 bg-white dark:bg-gray-800 shadow-sm">
+      <nav class="max-w-4xl mx-auto flex items-center justify-between px-4">
+        <a href="/" class="text-xl font-bold">peculio.tech</a>
+        <span class="text-sm"
+          >{lang === "es" ? "Certificados" : "Certificates"}</span
+        >
+      </nav>
+    </header>
+
+    <main class="max-w-4xl mx-auto p-6 mt-4">
+      <slot />
+    </main>
+  </body>
+</html>
