@@ -4,50 +4,79 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <h1 class="text-3xl font-bold mb-6">My Certificates</h1>
-  <div class="grid gap-6 sm:grid-cols-1 md:grid-cols-2">
-    {
-      certificates.map((cert) => (
-        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
-          <h2 class="text-lg font-semibold mb-2">{cert.title}</h2>
-          <div class="flex-1">
-            {cert.type === "pdf" ? (
-              <iframe
-                src={cert.file}
-                class="w-full h-130 rounded border border-gray-300 dark:border-gray-600"
-              />
-            ) : (
-              <img
-                src={cert.file}
-                alt={cert.title}
-                class="w-full h-auto rounded border border-gray-300 dark:border-gray-600"
-              />
-            )}
-          </div>
-          <a
-            href={cert.file}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center justify-center mt-4 px-6 py-2 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-medium rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 ease-in-out"
+  <!-- Header sticky -->
+  <header
+    class="sticky top-0 z-50 py-6 bg-white dark:bg-[#0D0208] shadow-lg border-b border-[#F5332C]/20 backdrop-blur-sm transition-all duration-300"
+  >
+    <nav class="max-w-4xl mx-auto flex items-center justify-between px-4">
+      <a
+        href="/#"
+        class="flex items-center gap-3 text-xl font-bold text-[#F5332C] hover:text-[#D42A23] transition-colors duration-200"
+      >
+        <img src="/img/Vector.svg" alt="Logo" class="w-8 h-8" />
+        <h1>Certificados</h1>
+      </a>
+      <a
+        href="https://portfolio.peculio.tech/"
+        target="_blank"
+        class="text-xl font-bold text-[#F5332C] hover:text-[#D42A23] transition-colors duration-200"
+      >
+        <h1>Portafolio</h1>
+      </a>
+    </nav>
+  </header>
+
+  <main class="max-w-4xl mx-auto p-6 mt-4">
+    <div class="grid gap-6 sm:grid-cols-1 md:grid-cols-2">
+      {
+        certificates.map((cert) => (
+          <div
+            class="bg-white dark:bg-[#0D0208] rounded-lg shadow-md p-4 border-2 border-gray-200 dark:border-[#F5332C]/30 hover:shadow-lg hover:border-[#F5332C]/40 transition-all duration-300 flex flex-col h-full"
+            style="position: relative; z-index: 10;"
           >
-            <svg
-              class="w-4 h-4 mr-2"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
+            <h2 class="text-lg font-semibold mb-2">{cert.title}</h2>
+            <div class="flex-1">
+              {cert.type === "pdf" ? (
+                <iframe
+                  src={cert.file}
+                  class="w-full h-130 rounded border border-gray-300 dark:border-gray-600"
+                />
+              ) : (
+                <img
+                  src={cert.file}
+                  alt={cert.title}
+                  class="w-full h-auto rounded border border-gray-300 dark:border-gray-600"
+                />
+              )}
+            </div>
+            <a
+              href={cert.file}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center mt-4 px-6 py-2 text-white font-medium rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 ease-in-out"
+              style="background: linear-gradient(135deg, #F5332C 0%, #D42A23 100%); position: relative; z-index: 20; cursor: pointer;"
+              onmouseover="this.style.background='linear-gradient(135deg, #FF4A42 0%, #F5332C 100%)'"
+              onmouseout="this.style.background='linear-gradient(135deg, #F5332C 0%, #D42A23 100%)'"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-              />
-            </svg>
-            Ver Completo
-          </a>
-        </div>
-      ))
-    }
-  </div>
+              <svg
+                class="w-4 h-4 mr-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                />
+              </svg>
+              Ver Completo
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </main>
 </Layout>

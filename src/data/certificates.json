@@ -1,59 +1,57 @@
 [
-    {
-      "title": "IT Technologist - UTEC",
-      "type": "pdf",
-      "file": "/certificates/UTEC_technologist.pdf"
-    },
-    {
-      "title": "Advance Certificate C1 - Cambridge",
-      "type": "image",
-      "file": "/certificates/Cambridge_Advanced_Certificate.jpg"
-    },
-    {
-      "title": "Excelence Medal - WorldSkills Chile 2024",
-      "type": "pdf",
-      "file": "/certificates/excelence_medal_worldskills.pdf"
-    }
-    ,
-    {
-      "title": "Twin English Centre - London",
-      "type": "pdf",
-      "file": "/certificates/Twin_English.pdf"
-    },
-    {
-      "title": "IA - UTEC",
-      "type": "pdf",
-      "file": "/certificates/UTEC_IA.pdf"
-    },
-    {
-      "title": "IT Technician - UTU",
-      "type": "pdf",
-      "file": "/certificates/UTU_technician.pdf"
-    },
-    {
-      "title": "Science Fair",
-      "type": "image",
-      "file": "/certificates/ScienceFair.jpg"
-    },
-    {
-      "title": "Science Fair - UTU",
-      "type": "image",
-      "file": "/certificates/ScienceFair_UTU.jpg"
-    }
-    ,
-    {
-      "title": "Programming and Robotics Olympics - 2016",
-      "type": "image",
-      "file": "/certificates/Olympics_2016.jpg"
-    },
-    {
-      "title": "Programming and Robotics Olympics - 2015",
-      "type": "image",
-      "file": "/certificates/Olympics_2015.jpg"
-    },
-    {
-      "title": "Programming and Robotics Olympics - 2014",
-      "type": "image",
-      "file": "/certificates/Olympics_2014.jpg"
-    }
-  ]
+  {
+    "title": "Tecnólogo en Informática - UTEC",
+    "type": "pdf",
+    "file": "/certificates/UTEC_technologist.pdf"
+  },
+  {
+    "title": "Advance Certificate C1 - Cambridge",
+    "type": "image",
+    "file": "/certificates/Cambridge_Advanced_Certificate.jpg"
+  },
+  {
+    "title": "Medalla de Excelencia - WorldSkills Chile 2024",
+    "type": "pdf",
+    "file": "/certificates/excelence_medal_worldskills.pdf"
+  },
+  {
+    "title": "Twin English Centre - London",
+    "type": "pdf",
+    "file": "/certificates/Twin_English.pdf"
+  },
+  {
+    "title": "IA - UTEC",
+    "type": "pdf",
+    "file": "/certificates/UTEC_IA.pdf"
+  },
+  {
+    "title": "Técnico en Informática - UTU",
+    "type": "pdf",
+    "file": "/certificates/UTU_technician.pdf"
+  },
+  {
+    "title": "Club de Ciencias",
+    "type": "image",
+    "file": "/certificates/ScienceFair.jpg"
+  },
+  {
+    "title": "Club de Ciencias - UTU",
+    "type": "image",
+    "file": "/certificates/ScienceFair_UTU.jpg"
+  },
+  {
+    "title": "Olimpiadas de Programación y Robótica - 2016",
+    "type": "image",
+    "file": "/certificates/Olympics_2016.jpg"
+  },
+  {
+    "title": "Olimpiadas de Programación y Robótica - 2015",
+    "type": "image",
+    "file": "/certificates/Olympics_2015.jpg"
+  },
+  {
+    "title": "Olimpiadas de Programación y Robótica - 2014",
+    "type": "image",
+    "file": "/certificates/Olympics_2014.jpg"
+  }
+]

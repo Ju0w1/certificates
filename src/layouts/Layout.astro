@@ -7,23 +7,40 @@ import "../styles/global.css";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{lang === "es" ? "Certificados" : "Certificates"}</title>
-  </head>
-  <body
-    class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans transition-colors duration-300"
-  >
-    <!-- Header sticky -->
-    <header class="sticky top-0 z-50 py-6 bg-white dark:bg-gray-800 shadow-sm">
-      <nav class="max-w-4xl mx-auto flex items-center justify-between px-4">
-        <a href="/" class="text-xl font-bold">peculio.tech</a>
-        <span class="text-sm"
-          >{lang === "es" ? "Certificados" : "Certificates"}</span
-        >
-      </nav>
-    </header>
+    <title>Certificados</title>
 
-    <main class="max-w-4xl mx-auto p-6 mt-4">
+    <!-- Favicon y iconos -->
+    <link rel="icon" type="image/svg+xml" href="/img/Vector.svg" />
+    <link rel="shortcut icon" type="image/svg+xml" href="/img/Vector.svg" />
+    <link rel="apple-touch-icon" href="/img/Vector.svg" />
+
+    <!-- Meta tags adicionales -->
+    <meta name="description" content="Certificados y logros profesionales" />
+    <meta name="theme-color" content="#F5332C" />
+  </head>
+  <body class="relative text-[#0D0208] dark:text-white">
+    <div
+      class="w-full dark:bg-[#0D0208] bg-white dark:bg-[radial-gradient(#ffffff33_1px,#0D0208_1px)] bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[size:20px_20px] [background-size:16px_16px]"
+      style="position: relative; z-index: 1;"
+    >
       <slot />
-    </main>
+    </div>
+    <style is:global>
+      :root {
+        color-scheme: light dark;
+      }
+
+      html {
+        font-family: "Inter Variable", system-ui, sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100svh;
+        overscroll-behavior: none;
+      }
+    </style>
   </body>
 </html>

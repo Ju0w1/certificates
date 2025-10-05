@@ -1,1 +1,18 @@
 @import "tailwindcss";
+
+/* Variables CSS para los colores de marca */
+:root {
+  --brand-red: #F5332C;
+  --brand-black: #0D0208;
+  --brand-red-light: #FF4A42;
+  --brand-red-dark: #D42A23;
+}
+
+/* Estilos adicionales para mejorar la experiencia */
+.brand-gradient {
+  background: linear-gradient(135deg, var(--brand-red) 0%, var(--brand-red-dark) 100%);
+}
+
+.brand-gradient:hover {
+  background: linear-gradient(135deg, var(--brand-red-light) 0%, var(--brand-red) 100%);
+}
